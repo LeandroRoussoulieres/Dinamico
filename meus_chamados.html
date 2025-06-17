@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Chamados - UVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner-image">
+        <img src="uva_banner.webp" alt="Logotipo Universidade Veiga de Almeida">
+    </div>
+    <header>
+        <img src="uva_azul.png" alt="Logotipo UVA Azul" class="header-logo">
+        <h1>Sistema de Chamados Técnicos UVA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Abrir Chamado</a></li>
+            <li><a href="meus_chamados.html" class="active">Meus Chamados</a></li>
+            <li><a href="acesso_administrador.html">Acesso do Administrador</a></li>
+            <li><a href="equipe.html">Equipe</a></li> </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="form-content">
+                <h2>Meus Chamados</h2>
+                <div class="chamado-item">
+                    <h3>Chamado #00123</h3>
+                    <p><strong>Ambiente:</strong> Sala 205 - Bloco C</p>
+                    <p><strong>E-mail:</strong> aluno.exemplo@uva.br</p>
+                    <p><strong>Tipo de Problema:</strong> Projetor não ligando</p>
+                    <p><strong>Descrição:</strong> O projetor da sala não liga, testamos as conexões e nada.</p>
+                    <p><strong>Status:</strong> <span class="status-em-andamento">Em Andamento</span></p>
+                    <p><strong>Abertura:</strong> 15/06/2025 10:30</p>
+                    <p><strong>Última Atualização:</strong> 15/06/2025 14:00 (Técnico João Silva)</p>
+                </div>
+
+                <div class="chamado-item">
+                    <h3>Chamado #00122</h3>
+                    <p><strong>Ambiente:</strong> Laboratório de Informática 1</p>
+                    <p><strong>E-mail:</strong> professor.exemplo@uva.br</p>
+                    <p><strong>Tipo de Problema:</strong> Lâmpada queimada</p>
+                    <p><strong>Descrição:</strong> A lâmpada do canto esquerdo da sala está queimada.</p>
+                    <p><strong>Status:</strong> <span class="status-finalizado">Finalizado</span></p>
+                    <p><strong>Abertura:</strong> 14/06/2025 09:00</p>
+                    <p><strong>Resolução:</strong> Lâmpada substituída.</p>
+                    <p><strong>Última Atualização:</strong> 14/06/2025 11:30 (Técnico Maria Santos)</p>
+                </div>
+
+                <div class="chamado-item">
+                    <h3>Chamado #00121</h3>
+                    <p><strong>Ambiente:</strong> Auditório Principal</p>
+                    <p><strong>E-mail:</strong> funcionario.exemplo@uva.br</p>
+                    <p><strong>Tipo de Problema:</strong> Ar-condicionado quebrado</p>
+                    <p><strong>Descrição:</strong> O ar-condicionado do auditório não está gelando.</p>
+                    <p><strong>Status:</strong> <span class="status-aberto">Aberto</span></p>
+                    <p><strong>Abertura:</strong> 14/06/2025 16:45</p>
+                    <p><strong>Última Atualização:</strong> N/A</p>
+                </div>
+
+                <p class="no-chamados hidden">Nenhum chamado registrado.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Desenvolvimento Dinâmico - UVA</p>
+    </footer>
+    <script>
+        // Em um sistema real, os chamados seriam carregados de um banco de dados
+        // e exibidos dinamicamente aqui.
+    </script>
+</body>
+</html>

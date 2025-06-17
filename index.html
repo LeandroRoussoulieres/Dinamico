@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Chamado Técnico - UVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner-image">
+        <img src="uva_banner.webp" alt="Logotipo Universidade Veiga de Almeida">
+    </div>
+    <header>
+        <img src="uva_azul.png" alt="Logotipo UVA Azul" class="header-logo">
+        <h1>Sistema de Chamados Técnicos UVA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Abrir Chamado</a></li>
+            <li><a href="meus_chamados.html">Meus Chamados</a></li>
+            <li><a href="acesso_administrador.html">Acesso do Administrador</a></li>
+            <li><a href="equipe.html">Equipe</a></li> </ul>
+    </nav>
+    <main>
+        <div class="container with-qr-code">
+            <div class="qr-code-section">
+                <div class="qr-code-image">
+                    <img src="qrcode.jpg" alt="QR Code do Ambiente">
+                </div>
+                <p class="qr-code-text">Você pode abrir o chamado scaneando o QRCODE do local que se encontra</p>
+            </div>
+            <div class="form-content">
+                <h2>Abrir Novo Chamado</h2>
+                <form id="form-chamado">
+                    <div class="form-group">
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@uva.br" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local-problema">Local do Problema (Ex: Sala 101 - Bloco A, Lab. Informática 3):</label>
+                        <input type="text" id="local-problema" name="local-problema" placeholder="Informe o local exato do problema" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-problema">Tipo de Problema:</label>
+                        <select id="tipo-problema" name="tipo-problema" required>
+                            <option value="">Selecione o tipo de problema</option>
+                            <option value="ar-condicionado">Ar-condicionado quebrado</option>
+                            <option value="temperatura-fora">Temperatura fora da faixa de conforto</option>
+                            <option value="projetor-nao-liga">Projetor não ligando</option>
+                            <option value="problemas-tomadas">Problemas com tomadas</option>
+                            <option value="lampada-queimada">Lâmpada queimada</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição Detalhada:</label>
+                        <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva o problema com o máximo de detalhes." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Abrir Chamado</button>
+                </form>
+                <div id="mensagem-status" class="hidden">
+                    <p>Chamado criado com sucesso! Status: <span class="status-aberto">Aberto</span></p>
+                    <p>Você pode acompanhar o status em <a href="meus_chamados.html">Meus Chamados</a>.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Desenvolvimento Dinâmico - UVA</p>
+    </footer>
+    <script>
+        document.getElementById('form-chamado').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('mensagem-status').classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

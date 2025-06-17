@@ -1,0 +1,288 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #003366; /* Cor institucional UVA */
+    color: #fff;
+    padding: 1rem 20px; /* Adicionado padding lateral para a imagem */
+    text-align: center;
+    display: flex; /* Habilita flexbox para alinhamento de itens */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente (texto + imagem) */
+    gap: 15px; /* Espaço entre a imagem e o texto */
+}
+
+header h1 {
+    margin: 0; /* Remove margem padrão do h1 para melhor alinhamento */
+    color: #fff; /* Garante que a cor do texto seja branca */
+    font-size: 1.8rem; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.header-logo { /* Estilo para a imagem dentro do header */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    width: 100px; /* Tamanho da imagem uva_azul.png no cabeçalho */
+    height: auto;
+    display: block; /* Garante que seja um bloco para margin auto funcionar se necessário */
+}
+
+
+.banner-image { /* Estilo para a imagem do banner no topo */
+    text-align: center;
+    background-color: #003366; /* Cor de fundo para garantir contraste */
+    padding: 10px 0; /* Espaçamento ao redor da imagem */
+    margin-bottom: 20px; /* Espaço abaixo do banner */
+}
+
+.banner-image img {
+    max-width: 100%; /* Garante que a imagem não transborde */
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Removido o estilo .subtitle */
+/* .subtitle {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-top: -10px;
+    margin-bottom: 10px;
+} */
+
+nav {
+    background-color: #0056b3; /* Um tom de azul mais claro para o menu */
+    padding: 0.8rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: center; /* Centralizar os itens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #003d80; /* Cor mais escura ao passar o mouse ou ativo */
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Ajustado para acomodar o conteúdo */
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem; /* Espaço entre o conteúdo e o rodapé */
+}
+
+/* CONTAINER GERAL - Remove display:flex padrão */
+.container {
+    max-width: 800px;
+    margin: 2rem auto; /* Centraliza o container */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe específica para container com layout de QR Code */
+.container.with-qr-code {
+    display: flex; /* Habilita flexbox apenas aqui */
+    gap: 20px; /* Espaço entre o QR code e o formulário */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+
+.qr-code-section { /* Contêiner para QR Code e texto */
+    flex-shrink: 0;
+    width: 200px; /* Ajuste a largura para acomodar a imagem e o texto */
+    text-align: center;
+}
+
+.qr-code-image {
+    width: 150px; /* Largura fixa para a imagem do QR code */
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    overflow: hidden; /* Garante que a imagem se encaixe */
+    margin: 0 auto; /* Centraliza a imagem dentro da seção */
+}
+
+.qr-code-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.qr-code-text { /* Estilo para o texto ao lado do QR Code */
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.form-content {
+    flex: 1; /* O formulário ocupa o espaço restante quando em flex */
+    /* Garante que o form-content ocupe a largura total quando o container não é flex */
+    width: 100%;
+}
+
+
+h1, h2 {
+    color: #003366;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background-color: #007bff; /* Azul vibrante para ação */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens de status */
+.hidden {
+    display: none;
+}
+
+#mensagem-status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.status-aberto {
+    font-weight: bold;
+    color: #ffc107; /* Amarelo para 'Aberto' */
+}
+
+/* Chamado Item */
+.chamado-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.chamado-item h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.chamado-item p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.chamado-item p strong {
+    color: #555;
+}
+
+/* Cores de Status */
+.status-aberto {
+    color: #ffc107; /* Amarelo para 'Aberto' */
+    font-weight: bold;
+}
+
+.status-em-andamento {
+    color: #17a2b8; /* Ciano para 'Em Andamento' */
+    font-weight: bold;
+}
+
+.status-finalizado {
+    color: #28a745; /* Verde para 'Finalizado' */
+    font-weight: bold;
+}
+
+.no-chamados {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    padding: 2rem;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+/* Equipe Members */
+.equipe-membro {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.equipe-membro h3 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.equipe-membro p {
+    margin-bottom: 0.3rem;
+}

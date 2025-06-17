@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso do Administrador - UVA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a página de login */
+        .login-container {
+            max-width: 400px;
+            margin: 5rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .login-container .form-group input {
+            width: calc(100% - 22px); /* Ajuste para padding + border */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-image">
+        <img src="uva_banner.webp" alt="Logotipo Universidade Veiga de Almeida">
+    </div>
+    <header>
+        <img src="uva_azul.png" alt="Logotipo UVA Azul" class="header-logo">
+        <h1>Sistema de Chamados Técnicos UVA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Abrir Chamado</a></li>
+            <li><a href="meus_chamados.html">Meus Chamados</a></li>
+            <li><a href="acesso_administrador.html" class="active">Acesso do Administrador</a></li>
+            <li><a href="equipe.html">Equipe</a></li> </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="login-container">
+                <h2>Acesso do Administrador</h2>
+                <form id="form-login">
+                    <div class="form-group">
+                        <label for="usuario">Usuário:</label>
+                        <input type="text" id="usuario" name="usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Desenvolvimento Dinâmico - UVA</p>
+    </footer>
+</body>
+</html>
