@@ -11,7 +11,7 @@
             max-width: 400px;
             margin: 5rem auto;
             padding: 2rem;
-            background-color: #fff;
+            background-color: #fff; /* Será sobrescrito pelo rgba() se houver background na body */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -27,9 +27,6 @@
     </style>
 </head>
 <body>
-    <div class="banner-image">
-        <img src="uva_banner.webp" alt="Logotipo Universidade Veiga de Almeida">
-    </div>
     <header>
         <img src="uva_azul.png" alt="Logotipo UVA Azul" class="header-logo">
         <h1>Sistema de Chamados Técnicos UVA</h1>
@@ -39,7 +36,8 @@
             <li><a href="index.html">Abrir Chamado</a></li>
             <li><a href="meus_chamados.html">Meus Chamados</a></li>
             <li><a href="acesso_administrador.html" class="active">Acesso do Administrador</a></li>
-            <li><a href="equipe.html">Equipe</a></li> </ul>
+            <li><a href="equipe.html">Equipe</a></li>
+        </ul>
     </nav>
     <main>
         <div class="container">
